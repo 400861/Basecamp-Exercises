@@ -16,7 +16,7 @@ client = anthropic.Anthropic(api_key=api_key)
 # Models we'll benchmark
 MODEL_SONNET = "claude-sonnet-4-6"
 MODEL_HAIKU = "claude-haiku-4-5-20251001"
-MODEL_OPUS = "claude-opus-4-7"
+MODEL_OPUS = "claude-opus-4-8"
 
 # Default model for exercises
 DEFAULT_MODEL = MODEL_SONNET
@@ -149,7 +149,7 @@ print(f"OTPS: {otps:.1f} tokens/sec ({tokens} tokens / {gen_time:.3f}s)")
 PRICING = {
     "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
     "claude-haiku-4-5-20251001": {"input": 1.00, "output": 5.00},
-    "claude-opus-4-7": {"input": 5.00, "output": 25.00},
+    "claude-opus-4-8": {"input": 5.00, "output": 25.00},
 }
 
 def calculate_cost(model: str, input_tokens: int, output_tokens: int) -> tuple[float, float, float]:
